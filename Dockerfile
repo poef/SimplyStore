@@ -1,7 +1,7 @@
 # ==============================================================================
 # Dependencies
 # ------------------------------------------------------------------------------
-FROM node:18-alpine3.17 as builder
+FROM node:20-alpine3.17 as builder
 
 WORKDIR /usr/src/app
 COPY package.json ./
@@ -20,7 +20,7 @@ ENV NODE_ENV=production
 
 RUN addgroup -g 1000 node \
     && adduser -u 1000 -G node -s /bin/sh -D node \
-    && apk add --no-cache nodejs=~18.14
+    && apk add --no-cache nodejs=~18.17
 
 COPY --chown=node:node . /app
 COPY --chown=node:node --from=builder /usr/src/app/node_modules /app/node_modules
