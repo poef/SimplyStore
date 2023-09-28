@@ -27,7 +27,7 @@ And start it up:
 npm start 
 ```
 
-The server comes with a small demo dataset, which you can take a look at here `http://localhost:3000/`:
+The server comes with a small demo dataset, which you can take a look at here `http://localhost:3000/query/`:
 
 This page will show this:
 
@@ -37,7 +37,7 @@ This page will show this:
 }
 ```
 
-By following the link to `http://localhost:3000/persons/` you get:
+By following the link to `http://localhost:3000/query/persons/` you get:
 
 ```
 [
